@@ -1,0 +1,56 @@
+.skillset {
+	@include setPage;
+
+	&__skills {
+		padding-left: 5rem;
+
+		@media screen and (max-width: 800px) {
+			padding-left: 0;
+			margin-bottom: 8rem;
+		}
+	}
+
+	&__skills-list {
+		font-size: 2rem;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: 900px) {
+			font-size: 1.8rem;
+		}
+
+		@media screen and (max-width: 800px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		@media screen and (max-width: 600px) {
+			font-size: 1.6rem;
+		}
+	}
+
+	&__skill-section {
+		margin-bottom: 8rem;
+
+		@media screen and (max-width: 800px) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__skill {
+		list-style-type: none;
+		margin-bottom: 1rem;
+	}
+
+	&__skill:not(:last-child)::after {
+		margin: 0 2.5rem;
+		content: '\2022';
+		font-size: 2rem;
+		color: $color-blue;
+
+		@media screen and (max-width: 800px) {
+			content: '';
+		}
+	}
+}

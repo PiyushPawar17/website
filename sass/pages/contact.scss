@@ -1,0 +1,107 @@
+.contact {
+	@include setPage;
+
+	&__contact {
+		padding-left: 5rem;
+
+		@media screen and (max-width: 800px) {
+			padding-left: 0;
+			margin-bottom: 8rem;
+		}
+	}
+
+	&__email {
+		width: 90%;
+		margin: 0 auto;
+		padding: 6rem 0;
+		border: 2px solid $color-yellow;
+		border-radius: 5px;
+		text-align: center;
+		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.25);
+
+		@media screen and (max-width: 800px) {
+			padding: 5rem 2rem;
+			width: 100%;
+		}
+
+		p {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+
+			@media screen and (max-width: 1200px) {
+				font-size: 2rem;
+			}
+
+			@media screen and (max-width: 800px) {
+				font-size: 1.8rem;
+			}
+
+			@media screen and (max-width: 600px) {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	&__email-id {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 3.5rem;
+
+		img {
+			width: 3.5rem;
+			margin-right: 2rem;
+
+			@media screen and (max-width: 1000px) {
+				width: 3rem;
+			}
+
+			@media screen and (max-width: 800px) {
+				display: none;
+			}
+		}
+
+		span {
+			font-size: 3rem;
+			font-weight: bold;
+
+			@media screen and (max-width: 1000px) {
+				font-size: 2.5rem;
+			}
+
+			@media screen and (max-width: 800px) {
+				font-size: 2.2rem;
+			}
+
+			@media screen and (max-width: 800px) {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	&__hr {
+		width: 60%;
+		margin: 6rem auto;
+		height: 2px;
+		background-color: $color-yellow-light;
+	}
+
+	&__social-links {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+
+		img {
+			width: 4rem;
+			transition: all 0.3s ease-out;
+
+			@media screen and (max-width: 800px) {
+				width: 3rem;
+			}
+		}
+	}
+
+	&__social-links img:hover {
+		transform: scale(1.2);
+	}
+}

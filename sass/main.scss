@@ -1,0 +1,19 @@
+@import 'abstracts/animations';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/box';
+@import 'components/button';
+@import 'components/card';
+
+@import 'layout/navbar';
+@import 'layout/footer';
+
+@import 'pages/home';
+@import 'pages/skillset';
+@import 'pages/projects';
+@import 'pages/contact';

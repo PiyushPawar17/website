@@ -1,0 +1,221 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 0.5rem 1rem rgba($color-black, 0.25);
+	position: fixed;
+	width: 100%;
+	height: 7rem;
+	background-color: $color-white;
+	z-index: 10;
+	@include addPadding;
+
+	@media screen and (max-width: 800px) {
+		height: 6rem;
+	}
+
+	a,
+	a:visited {
+		color: $text-color;
+		text-decoration: none;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		font-size: 1.6rem;
+		cursor: pointer;
+
+		img {
+			width: 4rem;
+			margin-right: 1rem;
+		}
+
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: flex-end;
+		list-style-type: none;
+		font-size: 1.8rem;
+
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+
+	&__link {
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	&__link:not(:last-child) {
+		margin-right: 4rem;
+	}
+
+	&__link:nth-child(1):hover {
+		color: $color-pink;
+	}
+
+	&__link:nth-child(2):hover {
+		color: $color-blue;
+	}
+
+	&__link:nth-child(3):hover {
+		color: $color-purple;
+	}
+
+	&__link:nth-child(4):hover {
+		color: $color-yellow;
+	}
+}
+
+.mobile-nav {
+	display: none;
+
+	@media screen and (max-width: 800px) {
+		display: block;
+	}
+
+	&__checkbox {
+		display: none;
+	}
+
+	&__checkbox:checked ~ &__background {
+		transform: translate(-50%) scale(80);
+	}
+
+	&__checkbox:checked ~ &__nav {
+		opacity: 1;
+		width: 100%;
+	}
+
+	&__checkbox:checked + &__button &__icon {
+		height: 3px;
+	}
+
+	&__checkbox:checked + &__button &__icon::before {
+		height: 3px;
+		transform: rotateZ(-45deg) translateY(0.6rem) translateX(-5px);
+		width: 1.4rem;
+	}
+
+	&__checkbox:checked + &__button &__icon::after {
+		height: 3px;
+		transform: rotateZ(45deg) translateY(-0.6rem) translateX(-5px);
+		width: 1.4rem;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 50;
+		width: 4rem;
+		height: 4rem;
+		z-index: 100;
+		cursor: pointer;
+	}
+
+	&__background {
+		position: absolute;
+		top: 50%;
+		background-color: rgba($color-white, 0.9);
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		transform: translateY(-50%) scale(1);
+		transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 0;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 40;
+		padding: 5rem;
+		opacity: 0;
+		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.26, 1.5);
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		font-size: 3rem;
+		text-align: center;
+
+		@media screen and (max-width: 500px) {
+			font-size: 2.5rem;
+		}
+	}
+
+	&__link {
+		padding: 5rem 0;
+		cursor: pointer;
+		transition: all 0.2s ease;
+
+		@media screen and (max-width: 500px) {
+			padding: 3.5rem;
+		}
+	}
+
+	&__link:nth-child(1):hover {
+		color: $color-pink;
+	}
+
+	&__link:nth-child(2):hover {
+		color: $color-blue;
+	}
+
+	&__link:nth-child(3):hover {
+		color: $color-purple;
+	}
+
+	&__link:nth-child(4):hover {
+		color: $color-yellow;
+	}
+
+	&__icon,
+	&__icon::before,
+	&__icon::after {
+		height: 2px;
+		background-color: $color-pink;
+		display: inline-block;
+		border-radius: 5rem;
+	}
+
+	&__icon::before,
+	&__icon::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		transition: all 0.2s;
+	}
+
+	&__icon {
+		position: relative;
+		width: 2.5rem;
+	}
+
+	&__icon::before {
+		transform-origin: left;
+		top: -0.8rem;
+		width: 3rem;
+	}
+
+	&__icon::after {
+		transform-origin: left;
+		top: 0.8rem;
+		width: 2rem;
+	}
+}

@@ -1,0 +1,30 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: $color-yellow;
+	color: $color-white;
+	text-align: center;
+	padding: 2.5rem 0;
+
+	&__copyright {
+		font-size: 1.6rem;
+		margin-bottom: 1.5rem;
+	}
+
+	&__credits {
+		font-size: 1.4rem;
+
+		a,
+		a:visited {
+			display: inline-block;
+			color: $color-white;
+			margin: 0 0.4rem;
+			transition: all 0.3s ease-out;
+		}
+
+		a:hover {
+			transform: scale(1.2) rotateZ(-3deg);
+		}
+	}
+}

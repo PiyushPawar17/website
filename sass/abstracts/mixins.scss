@@ -1,0 +1,26 @@
+@mixin addPadding {
+	padding: 0 15rem;
+
+	@media screen and (max-width: 1200px) {
+		padding: 0 10rem;
+	}
+
+	@media screen and (max-width: 800px) {
+		padding: 0 5rem;
+	}
+
+	@media screen and (max-width: 400px) {
+		padding: 0 2rem;
+	}
+}
+
+@mixin setPage {
+	position: relative;
+	min-height: calc(100vh - 7rem);
+	padding-top: 3rem;
+	overflow: hidden;
+
+	&__content {
+		@include addPadding;
+	}
+}

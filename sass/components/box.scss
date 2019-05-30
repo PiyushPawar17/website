@@ -1,0 +1,60 @@
+.box {
+	position: absolute;
+	width: 30rem;
+	height: 30rem;
+	border-radius: 2.5rem;
+	top: 50%;
+
+	@media screen and (max-width: 1200px) {
+		width: 25rem;
+		height: 25rem;
+	}
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
+		height: 5rem;
+		border-radius: 0;
+		top: auto;
+	}
+
+	&--right {
+		right: 0;
+		transform: translate(60%, -50%) rotateZ(-45deg);
+
+		@media screen and (max-width: 800px) {
+			left: 0;
+			transform: translate(0) rotate(0);
+			bottom: 0rem;
+		}
+	}
+
+	&--left {
+		left: 0;
+		transform: translate(-60%, -50%) rotateZ(135deg);
+
+		@media screen and (max-width: 800px) {
+			transform: translate(0) rotate(0);
+			bottom: 0rem;
+		}
+	}
+
+	&--pink {
+		background-image: linear-gradient(to right bottom, $color-pink-light, $color-pink);
+	}
+
+	&--blue {
+		background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue);
+	}
+
+	&--purple {
+		background-image: linear-gradient(to right bottom, $color-purple-light, $color-purple);
+	}
+
+	&--yellow {
+		background-image: linear-gradient(to right bottom, $color-yellow-light, $color-yellow);
+
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+}

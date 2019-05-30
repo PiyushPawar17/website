@@ -1,0 +1,37 @@
+{
+	"name": "website",
+	"version": "1.0.0",
+	"description": "Personal Website",
+	"author": "PiyushPawar17 <piyushpawar25@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start",
+		"export": "next build && next export -o build",
+		"format": "prettier --write **/*.{js,json,css,scss}",
+		"lint": "eslint ."
+	},
+	"dependencies": {
+		"@svgr/webpack": "^4.3.0",
+		"@zeit/next-sass": "^1.0.1",
+		"next": "^8.1.0",
+		"node-sass": "^4.12.0",
+		"react": "^16.8.6",
+		"react-anchor-link-smooth-scroll": "^1.0.12",
+		"react-dom": "^16.8.6",
+		"react-reveal": "^1.2.2"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.1",
+		"eslint": "5.12.0",
+		"eslint-config-prettier": "^4.3.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"eslint-plugin-react": "^7.13.0",
+		"prettier": "^1.17.1"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	}
+}
