@@ -15,7 +15,9 @@ const Index = () => (
 			<meta charSet="utf-8" />
 			<title>Piyush Pawar</title>
 			<meta name="viewport" content="initial-scale=1.0, width=device-width, shrink-to-fit=no" />
-			<meta name="description" content="Portfolio website of Piyush Pawar" />
+			<meta name="og:title" content="Piyush Pawar" />
+			<meta name="og:description" content="Front-end Developer who loves to work with React with knowledge of Node.js and MongoDB and can design delightful User Interfaces." />
+			<meta name="og:type" content="website" />
 
 			<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
 

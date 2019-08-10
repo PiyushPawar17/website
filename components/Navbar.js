@@ -7,18 +7,24 @@ const Navbar = () => (
 			<span>Piyush Pawar</span>
 		</AnchorLink>
 		<ul className="navbar__links">
-			<AnchorLink href="#home" className="navbar__link">
-				Home
-			</AnchorLink>
-			<AnchorLink offset="70" href="#skillset" className="navbar__link">
-				Skill Set
-			</AnchorLink>
-			<AnchorLink offset="70" href="#projects" className="navbar__link">
-				Projects
-			</AnchorLink>
-			<AnchorLink offset="70" href="#contact" className="navbar__link">
-				Contact
-			</AnchorLink>
+			<li className="navbar__link">
+				<AnchorLink href="#home">Home</AnchorLink>
+			</li>
+			<li className="navbar__link">
+				<AnchorLink offset="70" href="#skillset">
+					Skill Set
+				</AnchorLink>
+			</li>
+			<li className="navbar__link">
+				<AnchorLink offset="70" href="#projects">
+					Projects
+				</AnchorLink>
+			</li>
+			<li className="navbar__link">
+				<AnchorLink offset="70" href="#contact">
+					Contact
+				</AnchorLink>
+			</li>
 		</ul>
 
 		<div className="mobile-nav">
@@ -30,18 +36,24 @@ const Navbar = () => (
 
 			<nav className="mobile-nav__nav">
 				<ul className="mobile-nav__links">
-					<AnchorLink href="#home" className="mobile-nav__link">
-						Home
-					</AnchorLink>
-					<AnchorLink offset="50" href="#skillset" className="mobile-nav__link">
-						Skill Set
-					</AnchorLink>
-					<AnchorLink offset="50" href="#projects" className="mobile-nav__link">
-						Projects
-					</AnchorLink>
-					<AnchorLink offset="50" href="#contact" className="mobile-nav__link">
-						Contact
-					</AnchorLink>
+					<li className="mobile-nav__link">
+						<AnchorLink href="#home">Home</AnchorLink>
+					</li>
+					<li className="mobile-nav__link">
+						<AnchorLink offset="50" href="#skillset">
+							Skill Set
+						</AnchorLink>
+					</li>
+					<li className="mobile-nav__link">
+						<AnchorLink offset="50" href="#projects">
+							Projects
+						</AnchorLink>
+					</li>
+					<li className="mobile-nav__link">
+						<AnchorLink offset="50" href="#contact">
+							Contact
+						</AnchorLink>
+					</li>
 				</ul>
 			</nav>
 		</div>

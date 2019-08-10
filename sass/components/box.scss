@@ -51,7 +51,7 @@
 	}
 
 	&--yellow {
-		background-image: linear-gradient(to right bottom, $color-yellow-light, $color-yellow);
+		background-image: linear-gradient(to right bottom, $color-red-light, $color-red);
 
 		@media screen and (max-width: 800px) {
 			display: none;

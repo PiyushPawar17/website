@@ -56,20 +56,20 @@
 		margin-right: 4rem;
 	}
 
-	&__link:nth-child(1):hover {
+	&__link:nth-child(1) a:hover {
 		color: $color-pink;
 	}
 
-	&__link:nth-child(2):hover {
+	&__link:nth-child(2) a:hover {
 		color: $color-blue;
 	}
 
-	&__link:nth-child(3):hover {
+	&__link:nth-child(3) a:hover {
 		color: $color-purple;
 	}
 
-	&__link:nth-child(4):hover {
-		color: $color-yellow;
+	&__link:nth-child(4) a:hover {
+		color: $color-red;
 	}
 }
 
@@ -151,6 +151,7 @@
 	&__links {
 		display: flex;
 		flex-direction: column;
+		list-style-type: none;
 		font-size: 3rem;
 		text-align: center;
 
@@ -169,20 +170,20 @@
 		}
 	}
 
-	&__link:nth-child(1):hover {
+	&__link:nth-child(1) a:hover {
 		color: $color-pink;
 	}
 
-	&__link:nth-child(2):hover {
+	&__link:nth-child(2) a:hover {
 		color: $color-blue;
 	}
 
-	&__link:nth-child(3):hover {
+	&__link:nth-child(3) a:hover {
 		color: $color-purple;
 	}
 
-	&__link:nth-child(4):hover {
-		color: $color-yellow;
+	&__link:nth-child(4) a:hover {
+		color: $color-red;
 	}
 
 	&__icon,
