@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 import '../sass/main.scss';
 
 const Index = () => (
-	<div>
+	<>
 		<Head>
 			<meta charSet="utf-8" />
 			<title>Piyush Pawar</title>
@@ -29,7 +29,7 @@ const Index = () => (
 			<Contact />
 		</main>
 		<Footer />
-	</div>
+	</>
 );
 
 export default Index;

@@ -9,8 +9,8 @@ const Home = () => (
 					I&apos;m <span className="text-pink">Piyush</span>
 				</h1>
 				<h2 className="home__heading-secondary home__description">
-					Full Stack Web Developer who loves to work with React, Node.js, MongoDB and can design delightful
-					User Interfaces.
+					Front-end Developer who loves to work with React with knowledge of Node.js and MongoDB and can
+					design delightful User Interfaces.
 				</h2>
 				<AnchorLink offset="70" href="#contact" className="btn">
 					Contact Me
