@@ -39,7 +39,7 @@ const Index = () => {
 				<meta name="viewport" content="initial-scale=1.0, width=device-width, shrink-to-fit=no" />
 				<meta
 					name="description"
-					content="Front-end Developer who loves to work with React with knowledge of Node.js and MongoDB and can design delightful User Interfaces."
+					content="I code delightful User Experiences bringing ideas to life in the browser."
 				/>
 
 				<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
