@@ -35,7 +35,7 @@ const Index = () => {
 		<>
 			<Head>
 				<meta charSet="utf-8" />
-				<title>Piyush Pawar</title>
+				<title>Piyush Pawar - Front-end Developer</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width, shrink-to-fit=no" />
 				<meta
 					name="description"
