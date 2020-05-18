@@ -1,55 +1,77 @@
 .heading {
-	display: flex;
-	justify-content: center;
-
 	&--primary {
 		display: inline-block;
 		position: relative;
-		margin: 0 auto;
-		font-size: 3rem;
-		font-weight: 300;
-		padding: 0 1rem;
-		margin-bottom: 7rem;
+		font-size: 4rem;
+		font-weight: normal;
+		margin-bottom: 5rem;
 
-		@media screen and (max-width: 600px) {
-			font-size: 2.5rem;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 50%;
+			height: 2px;
+			top: 0;
+			left: 0;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 50%;
+			height: 2px;
+			bottom: 0;
+			left: 50%;
+		}
+
+		@media screen and (max-width: 700px) {
+			font-size: 3.6rem;
+		}
+
+		@media screen and (max-width: 500px) {
+			font-size: 3.2rem;
 		}
 	}
 
-	&--primary::after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 3px;
-		background-color: $color-black;
-		bottom: -3px;
-		left: 0;
-		border-radius: 10px;
-	}
-
-	&--secondary {
-		font-size: 2.5rem;
-		margin-bottom: 3rem;
-
-		@media screen and (max-width: 600px) {
-			font-size: 2rem;
-		}
-	}
-
-	&--tertiary {
-		font-size: 1.8rem;
-		margin-bottom: 1rem;
-	}
-
+	&--blue::before,
 	&--blue::after {
 		background-color: $color-blue;
 	}
 
-	&--purple::after {
-		background-color: $color-purple;
+	&--yellow::before,
+	&--yellow::after {
+		background-color: $color-yellow;
 	}
 
-	&--yellow::after {
-		background-color: $color-red;
+	&--pink::before,
+	&--pink::after {
+		background-color: $color-primary;
+	}
+}
+
+.title {
+	font-size: 5rem;
+	margin-bottom: 4.5rem;
+
+	@media screen and (max-width: 950px) {
+		font-size: 4.4rem;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 3.8rem;
+	}
+}
+
+.subtitle {
+	font-size: 3rem;
+	font-weight: normal;
+	margin-bottom: 8rem;
+
+	@media screen and (max-width: 950px) {
+		font-size: 2.6rem;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 2.2rem;
 	}
 }

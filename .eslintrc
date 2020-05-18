@@ -9,8 +9,6 @@
 	},
 	"rules": {
 		"indent": ["warn", "tab", { "SwitchCase": 1 }],
-		"react/forbid-component-props": ["warn", { "forbid": ["style"] }],
-		"react/forbid-dom-props": ["warn", { "forbid": ["style"] }],
 		"react/no-danger": "warn",
 		"react/prop-types": "off",
 		"react/no-this-in-sfc": "error",

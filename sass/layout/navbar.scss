@@ -1,38 +1,27 @@
 .navbar {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	box-shadow: 0 0.5rem 1rem rgba($color-black, 0.25);
-	position: fixed;
+	align-items: center;
 	width: 100%;
 	height: 7rem;
-	background-color: $color-white;
+	box-shadow: 0 0.5rem 1rem #1b212e;
+	background-color: $background-color;
+	position: fixed;
 	z-index: 10;
 	@include addPadding;
 
-	@media screen and (max-width: 800px) {
-		height: 6rem;
-	}
-
 	a,
 	a:visited {
-		color: $text-color;
 		text-decoration: none;
+		color: $text-color;
+		transition: all 0.25s ease-in-out;
 	}
 
 	&__logo {
-		display: flex;
-		align-items: center;
-		font-size: 1.6rem;
 		cursor: pointer;
 
 		img {
-			width: 4rem;
-			margin-right: 1rem;
-		}
-
-		@media screen and (max-width: 800px) {
-			display: none;
+			width: 15rem;
 		}
 	}
 
@@ -40,7 +29,6 @@
 		display: flex;
 		justify-content: flex-end;
 		list-style-type: none;
-		font-size: 1.8rem;
 
 		@media screen and (max-width: 800px) {
 			display: none;
@@ -48,28 +36,27 @@
 	}
 
 	&__link {
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
+		font-size: 1.8rem;
 
-	&__link:not(:last-child) {
-		margin-right: 4rem;
-	}
+		&:not(:last-child) {
+			margin-right: 5rem;
+		}
 
-	&__link:nth-child(1) a:hover {
-		color: $color-pink;
-	}
+		&:nth-child(1) a:hover {
+			color: #f53354;
+		}
 
-	&__link:nth-child(2) a:hover {
-		color: $color-blue;
-	}
+		&:nth-child(2) a:hover {
+			color: $color-blue;
+		}
 
-	&__link:nth-child(3) a:hover {
-		color: $color-purple;
-	}
+		&:nth-child(3) a:hover {
+			color: $color-yellow;
+		}
 
-	&__link:nth-child(4) a:hover {
-		color: $color-red;
+		&:nth-child(4) a:hover {
+			color: $color-primary;
+		}
 	}
 }
 
@@ -125,7 +112,7 @@
 	&__background {
 		position: absolute;
 		top: 50%;
-		background-color: rgba($color-white, 0.9);
+		background-color: rgba($background-color, 0.95);
 		width: 4rem;
 		height: 4rem;
 		border-radius: 50%;
@@ -171,7 +158,7 @@
 	}
 
 	&__link:nth-child(1) a:hover {
-		color: $color-pink;
+		color: #f53354;
 	}
 
 	&__link:nth-child(2) a:hover {
@@ -179,18 +166,18 @@
 	}
 
 	&__link:nth-child(3) a:hover {
-		color: $color-purple;
+		color: $color-yellow;
 	}
 
 	&__link:nth-child(4) a:hover {
-		color: $color-red;
+		color: $color-primary;
 	}
 
 	&__icon,
 	&__icon::before,
 	&__icon::after {
 		height: 2px;
-		background-color: $color-pink;
+		background-color: $color-primary;
 		display: inline-block;
 		border-radius: 5rem;
 	}

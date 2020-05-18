@@ -1,0 +1,33 @@
+.projects {
+	@include setPage;
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 5rem 10rem;
+
+		@media screen and (max-width: 950px) {
+			grid-gap: 5rem;
+		}
+
+		@media screen and (max-width: 750px) {
+			grid-gap: 2rem;
+		}
+
+		@media screen and (max-width: 650px) {
+			grid-template-columns: 1fr;
+			grid-gap: 3rem 0;
+		}
+	}
+
+	&__github {
+		margin-top: 5rem;
+		font-size: 1.6rem;
+		text-align: center;
+
+		a,
+		a:visited {
+			color: $color-blue;
+		}
+	}
+}

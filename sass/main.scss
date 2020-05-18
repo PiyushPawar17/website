@@ -1,19 +1,18 @@
-@import 'abstracts/animations';
-@import 'abstracts/mixins';
 @import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 @import 'base/base';
 @import 'base/typography';
 @import 'base/utilities';
 
-@import 'components/box';
-@import 'components/button';
 @import 'components/card';
+@import 'components/button';
+@import 'components/container';
+
+@import 'sections/home';
+@import 'sections/projects';
+@import 'sections/about';
+@import 'sections/contact';
 
 @import 'layout/navbar';
 @import 'layout/footer';
-
-@import 'pages/home';
-@import 'pages/skillset';
-@import 'pages/projects';
-@import 'pages/contact';

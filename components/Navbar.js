@@ -1,63 +1,77 @@
+import { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const Navbar = () => (
-	<nav className="navbar">
-		<AnchorLink href="#home" className="navbar__logo">
-			<img src="/static/img/boy.svg" alt="Boy" />
-			<span>Piyush Pawar</span>
-		</AnchorLink>
-		<ul className="navbar__links">
-			<li className="navbar__link">
-				<AnchorLink href="#home">Home</AnchorLink>
-			</li>
-			<li className="navbar__link">
-				<AnchorLink offset="70" href="#skillset">
-					Skill Set
-				</AnchorLink>
-			</li>
-			<li className="navbar__link">
-				<AnchorLink offset="70" href="#projects">
-					Projects
-				</AnchorLink>
-			</li>
-			<li className="navbar__link">
-				<AnchorLink offset="70" href="#contact">
-					Contact
-				</AnchorLink>
-			</li>
-		</ul>
+const Navbar = () => {
+	const [isChecked, setIsChecked] = useState(false);
 
-		<div className="mobile-nav">
-			<input type="checkbox" className="mobile-nav__checkbox" id="mobile-nav" />
-			<label htmlFor="mobile-nav" className="mobile-nav__button">
-				<span className="mobile-nav__icon" />
-			</label>
-			<div className="mobile-nav__background" />
+	return (
+		<nav className="navbar">
+			<AnchorLink href="#home" className="navbar__logo">
+				<img src="/static/img/Logo.svg" alt="Computer" />
+			</AnchorLink>
+			<ul className="navbar__links">
+				<li className="navbar__link">
+					<a href="https://blog.piyushpawar.dev" target="_blank" rel="noopener noreferrer">
+						Blog
+					</a>
+				</li>
+				<li className="navbar__link">
+					<AnchorLink offset="70" href="#projects">
+						Projects
+					</AnchorLink>
+				</li>
+				<li className="navbar__link">
+					<AnchorLink offset="70" href="#about">
+						About Me
+					</AnchorLink>
+				</li>
+				<li className="navbar__link">
+					<AnchorLink offset="70" href="#contact">
+						Contact
+					</AnchorLink>
+				</li>
+			</ul>
 
-			<nav className="mobile-nav__nav">
-				<ul className="mobile-nav__links">
-					<li className="mobile-nav__link">
-						<AnchorLink href="#home">Home</AnchorLink>
-					</li>
-					<li className="mobile-nav__link">
-						<AnchorLink offset="50" href="#skillset">
-							Skill Set
-						</AnchorLink>
-					</li>
-					<li className="mobile-nav__link">
-						<AnchorLink offset="50" href="#projects">
-							Projects
-						</AnchorLink>
-					</li>
-					<li className="mobile-nav__link">
-						<AnchorLink offset="50" href="#contact">
-							Contact
-						</AnchorLink>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</nav>
-);
+			<div className="mobile-nav">
+				<input
+					type="checkbox"
+					className="mobile-nav__checkbox"
+					id="mobile-nav"
+					checked={isChecked}
+					onChange={() => setIsChecked(!isChecked)}
+				/>
+				<label htmlFor="mobile-nav" className="mobile-nav__button">
+					<span className="mobile-nav__icon" />
+				</label>
+				<div className="mobile-nav__background" />
+
+				<nav className="mobile-nav__nav">
+					<ul className="mobile-nav__links">
+						<li className="mobile-nav__link">
+							<a href="https://blog.piyushpawar.dev" target="_blank" rel="noopener noreferrer">
+								Blog
+							</a>
+						</li>
+						<li className="mobile-nav__link" onClick={() => setIsChecked(false)}>
+							<AnchorLink offset="50" href="#projects">
+								Projects
+							</AnchorLink>
+						</li>
+						<li className="mobile-nav__link" onClick={() => setIsChecked(false)}>
+							<AnchorLink offset="50" href="#about">
+								About Me
+							</AnchorLink>
+						</li>
+						<li className="mobile-nav__link" onClick={() => setIsChecked(false)}>
+							<AnchorLink offset="50" href="#contact">
+								Contact
+							</AnchorLink>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</nav>
+	);
+};
 
 export default Navbar;

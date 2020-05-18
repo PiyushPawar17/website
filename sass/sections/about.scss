@@ -1,0 +1,15 @@
+.about {
+	@include setPage;
+
+	&__description {
+		font-size: 2.4rem;
+
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+		}
+
+		@media screen and (max-width: 800px) {
+			font-size: 2rem;
+		}
+	}
+}

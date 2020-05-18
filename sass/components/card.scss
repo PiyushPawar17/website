@@ -1,65 +1,49 @@
 .card {
-	position: relative;
-	border: 2px solid $color-purple;
-	box-shadow: 0 0.5rem 1rem rgba($color-black, 0.25);
-	border-radius: 0.5rem;
-	margin-bottom: 2rem;
-	padding-bottom: 2rem;
-	min-height: 45rem;
+	display: inline-block;
+	text-decoration: none;
+	color: $text-color;
+	background-color: $on-background-color;
+	padding: 3rem;
+	border: 1px solid $on-background-color;
+	outline: none;
+	border-radius: 3px;
+	box-shadow: 0 0.5rem 1rem rgba(35, 42, 58, 0.3);
+	transition: all 0.25s ease-out;
 
-	@media screen and (max-width: 900px) {
-		width: 35rem;
-		margin-bottom: 3rem;
+	&:hover,
+	&:focus {
+		border: 1px solid $color-blue;
 	}
 
-	@media screen and (max-width: 450px) {
-		width: 30rem;
-	}
+	&__heading {
+		display: inline-block;
+		position: relative;
+		font-size: 2.4rem;
+		font-weight: normal;
+		margin-bottom: 2rem;
 
-	@media screen and (max-width: 350px) {
-		width: 28rem;
-	}
-
-	&__header {
-		text-align: center;
-		background-color: $color-purple;
-		color: $color-white;
-		padding: 2.5rem 0;
-		font-size: 2rem;
-		font-weight: 300;
-	}
-
-	&__content {
-		padding: 3rem 2.5rem;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -2px;
+			height: 2px;
+			width: 100%;
+			background-color: $color-blue;
+			border-radius: 3px;
+		}
 	}
 
 	&__description {
+		font-size: 2rem;
+		min-height: 8rem;
+	}
+
+	&__tech {
 		font-size: 1.6rem;
-		min-height: 6rem;
 	}
 
-	&__technologies {
-		margin-bottom: 3rem;
-	}
-
-	&__technology {
-		font-size: 1.4rem;
-		margin-bottom: 2rem;
-	}
-
-	&__skills:not(:last-child)::after {
+	&__skill:not(:last-child)::after {
 		content: ', ';
-	}
-
-	&__link {
-		position: absolute;
-		right: 2.5rem;
-		bottom: 1rem;
-	}
-
-	&__github {
-		img {
-			width: 3rem;
-		}
 	}
 }
