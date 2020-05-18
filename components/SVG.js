@@ -1,7 +1,7 @@
 const shapes = {
 	triangleColored: {
 		shape: (
-			<g id="triangle-colored" data-name="triangle-colored" fill="none">
+			<g data-name="triangle-colored" fill="none">
 				<path
 					d="M57.438,10.5a7,7,0,0,1,12.125,0l51.376,89a7,7,0,0,1-6.062,10.5H12.124A7,7,0,0,1,6.061,99.5Z"
 					stroke="none"
@@ -17,7 +17,7 @@ const shapes = {
 	},
 	triangleDark: {
 		shape: (
-			<g id="triangle-dark" data-name="triangle-dark" fill="none">
+			<g data-name="triangle-dark" fill="none">
 				<path
 					d="M25.922,10.636a7,7,0,0,1,12.155,0L58.015,45.527A7,7,0,0,1,51.938,56H12.062A7,7,0,0,1,5.985,45.527Z"
 					stroke="none"
@@ -33,7 +33,7 @@ const shapes = {
 	},
 	circleColored: {
 		shape: (
-			<g id="circle-colored" data-name="circle-colored" fill="none" stroke="#7f169e" strokeWidth="10">
+			<g data-name="circle-colored" fill="none" stroke="#7f169e" strokeWidth="10">
 				<circle cx="72.5" cy="72.5" r="72.5" stroke="none" />
 				<circle cx="72.5" cy="72.5" r="67.5" fill="none" />
 			</g>
@@ -42,7 +42,7 @@ const shapes = {
 	},
 	circleDark: {
 		shape: (
-			<g id="circle-dark" data-name="circle-dark" fill="none" stroke="#20283a" strokeWidth="5">
+			<g data-name="circle-dark" fill="none" stroke="#20283a" strokeWidth="5">
 				<circle cx="27.5" cy="27.5" r="27.5" stroke="none" />
 				<circle cx="27.5" cy="27.5" r="25" fill="none" />
 			</g>
@@ -51,7 +51,7 @@ const shapes = {
 	},
 	rectangleColored: {
 		shape: (
-			<g id="rectangle-colored" data-name="rectangle-colored" fill="none" stroke="#e6a407" strokeWidth="8">
+			<g data-name="rectangle-colored" fill="none" stroke="#e6a407" strokeWidth="8">
 				<rect width="136" height="136" rx="6" stroke="none" />
 				<rect x="4" y="4" width="128" height="128" rx="2" fill="none" />
 			</g>
@@ -60,7 +60,7 @@ const shapes = {
 	},
 	rectangleDark: {
 		shape: (
-			<g id="rectangle-dark" data-name="rectangle-dark" fill="none" stroke="#20283a" strokeWidth="5">
+			<g data-name="rectangle-dark" fill="none" stroke="#20283a" strokeWidth="5">
 				<rect width="61" height="61" rx="4" stroke="none" />
 				<rect x="2.5" y="2.5" width="56" height="56" rx="1.5" fill="none" />
 			</g>
@@ -69,7 +69,7 @@ const shapes = {
 	},
 	hexagonColored: {
 		shape: (
-			<g id="hexagon-colored" data-name="hexagon-colored" transform="translate(65.5) rotate(30)" fill="none">
+			<g data-name="hexagon-colored" transform="translate(65.5) rotate(30)" fill="none">
 				<path
 					d="M109.205,0a7,7,0,0,1,6.065,3.5L148.985,62a7,7,0,0,1,0,6.991L115.27,127.5A7,7,0,0,1,109.2,131H41.8a7,7,0,0,1-6.065-3.5L2.015,69a7,7,0,0,1,0-6.991L35.73,3.5A7,7,0,0,1,41.8,0Z"
 					stroke="none"
@@ -85,7 +85,7 @@ const shapes = {
 	},
 	hexagonDark: {
 		shape: (
-			<g id="hexagon-dark" data-name="hexagon-dark" transform="translate(47) rotate(30)" fill="none">
+			<g data-name="hexagon-dark" transform="translate(47) rotate(30)" fill="none">
 				<path
 					d="M76.948,0a7,7,0,0,1,6.07,3.513l22.979,40a7,7,0,0,1,0,6.974l-22.979,40A7,7,0,0,1,76.948,94h-45.9a7,7,0,0,1-6.07-3.513L2,50.487a7,7,0,0,1,0-6.974l22.979-40A7,7,0,0,1,31.052,0Z"
 					stroke="none"

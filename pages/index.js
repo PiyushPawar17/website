@@ -44,7 +44,11 @@ const Index = () => {
 
 				<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
 
-				<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+				<link
+					href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+					rel="preload"
+					as="stylesheet"
+				/>
 			</Head>
 			<Navbar />
 			<main className="main">
