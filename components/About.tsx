@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 import Container from './Container';
 import SVG from './SVG';
 
-const About = () => (
+const About: React.FC = () => (
 	<section className="about" id="about">
 		<Container>
 			<SVG icon="circleDark" width={50} top="7%" left="60%" />

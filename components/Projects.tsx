@@ -3,7 +3,17 @@ import Fade from 'react-reveal/Fade';
 import Container from './Container';
 import SVG from './SVG';
 
-const ProjectCard = ({ name, description, tech, link, delay }) => (
+import { Props } from '../types/common';
+
+interface ProjectCardProps {
+	name: string;
+	description: string;
+	tech: string[];
+	link: string;
+	delay: number;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, tech, link, delay }) => (
 	<Fade bottom distance="30px" delay={delay}>
 		<a className="card" href={link} target="_blank" rel="noopener noreferrer">
 			<h2 className="card__heading">{name}</h2>
@@ -20,7 +30,7 @@ const ProjectCard = ({ name, description, tech, link, delay }) => (
 	</Fade>
 );
 
-const Projects = ({ shouldHideShapes }) => (
+const Projects: React.FC<Props> = ({ shouldHideShapes }) => (
 	<section className="projects" id="projects">
 		<Container>
 			<SVG icon="hexagonDark" width={85} top="5%" left="65%" />
@@ -45,7 +55,7 @@ const Projects = ({ shouldHideShapes }) => (
 				<ProjectCard
 					name="ColorMark"
 					description="A website to save your favorite colors"
-					tech={['React', 'Redux', , 'Styled Components', 'Express', 'MongoDB', 'JWT']}
+					tech={['React', 'Redux', 'Styled Components', 'Express', 'MongoDB', 'JWT']}
 					link="https://github.com/PiyushPawar17/colormark"
 					delay={250}
 				/>

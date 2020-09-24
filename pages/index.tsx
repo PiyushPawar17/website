@@ -8,9 +8,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-import '../sass/main.scss';
-
-const Index = () => {
+const Index: React.FC = () => {
 	const [shouldHideShapes, setShouldHideShapes] = useState(false);
 
 	useEffect(() => {
@@ -42,7 +40,7 @@ const Index = () => {
 					content="I code delightful User Experiences bringing ideas to life in the browser."
 				/>
 
-				<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+				<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
 				<link
 					href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
@@ -54,7 +52,7 @@ const Index = () => {
 			<main className="main">
 				<Home shouldHideShapes={shouldHideShapes} />
 				<Projects shouldHideShapes={shouldHideShapes} />
-				<About shouldHideShapes={shouldHideShapes} />
+				<About />
 				<Contact shouldHideShapes={shouldHideShapes} />
 			</main>
 			<Footer />

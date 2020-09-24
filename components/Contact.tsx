@@ -3,7 +3,9 @@ import Fade from 'react-reveal/Fade';
 import Container from './Container';
 import SVG from './SVG';
 
-const Contact = ({ shouldHideShapes }) => (
+import { Props } from '../types/common';
+
+const Contact: React.FC<Props> = ({ shouldHideShapes }) => (
 	<section className="contact" id="contact">
 		<Container>
 			<SVG icon="triangleDark" width={60} top="1%" left="27%" />

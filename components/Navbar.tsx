@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
 	const [isChecked, setIsChecked] = useState(false);
 
 	return (

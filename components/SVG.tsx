@@ -101,7 +101,24 @@ const shapes = {
 	}
 };
 
-const SVG = ({ icon, top, left, width, hidden = false, shouldHideShapes = false }) => {
+interface SVGProps {
+	icon:
+		| 'triangleColored'
+		| 'triangleDark'
+		| 'circleColored'
+		| 'circleDark'
+		| 'rectangleColored'
+		| 'rectangleDark'
+		| 'hexagonColored'
+		| 'hexagonDark';
+	top: string;
+	left: string;
+	width: number;
+	hidden?: boolean;
+	shouldHideShapes?: boolean;
+}
+
+const SVG: React.FC<SVGProps> = ({ icon, top, left, width, hidden = false, shouldHideShapes = false }) => {
 	return (
 		<svg
 			style={{ position: 'absolute', top, left, width, display: hidden && shouldHideShapes ? 'none' : 'inline' }}

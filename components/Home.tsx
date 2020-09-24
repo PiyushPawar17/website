@@ -3,7 +3,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Container from './Container';
 import SVG from './SVG';
 
-const Home = ({ shouldHideShapes }) => (
+import { Props } from '../types/common';
+
+const Home: React.FC<Props> = ({ shouldHideShapes }) => (
 	<section className="home" id="home">
 		<Container>
 			<SVG icon="circleColored" width={100} top="13%" left="7%" />

@@ -1,6 +1,4 @@
-const withSass = require('@zeit/next-sass');
-
-module.exports = withSass({
+module.exports = {
 	webpack: function(config) {
 		config.module.rules.push({
 			test: /\.svg$/,
@@ -8,4 +6,4 @@ module.exports = withSass({
 		});
 		return config;
 	}
-});
+};
