@@ -19,9 +19,13 @@
 
 	&__logo {
 		cursor: pointer;
+		display: flex;
+		align-items: center;
+		font-size: 2.2rem;
 
 		img {
-			width: 15rem;
+			width: 4.6rem;
+			margin-right: 1rem;
 		}
 	}
 

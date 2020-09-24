@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
 	return (
 		<nav className="navbar">
 			<AnchorLink href="#home" className="navbar__logo">
-				<img src="/static/img/Logo.svg" alt="Computer" />
+				<img src="/static/img/avatar.svg" alt="Computer" /> Piyush Pawar
 			</AnchorLink>
 			<ul className="navbar__links">
 				<li className="navbar__link">

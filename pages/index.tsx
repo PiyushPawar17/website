@@ -35,10 +35,14 @@ const Index: React.FC = () => {
 				<meta charSet="utf-8" />
 				<title>Piyush Pawar - Front-end Developer</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width, shrink-to-fit=no" />
+
+				<meta property="og:title" content="Piyush Pawar" />
 				<meta
-					name="description"
+					name="og:description"
 					content="I code delightful User Experiences bringing ideas to life in the browser."
 				/>
+				<meta property="og:url" content="https://piyushpawar.dev" />
+				<meta property="og:image" content="/avatar.png" />
 
 				<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
