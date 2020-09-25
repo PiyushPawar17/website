@@ -42,7 +42,7 @@ const Index: React.FC = () => {
 					content="I code delightful User Experiences bringing ideas to life in the browser."
 				/>
 				<meta property="og:url" content="https://piyushpawar.dev" />
-				<meta property="og:image" content="/avatar.png" />
+				<meta property="og:image" content="/static/img/avatar.png" />
 
 				<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
