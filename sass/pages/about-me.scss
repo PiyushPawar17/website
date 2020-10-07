@@ -43,6 +43,10 @@
 			font-size: 1.8rem;
 		}
 
+		@media screen and (max-width: 800px) {
+			margin-right: 0;
+		}
+
 		@media screen and (max-width: 550px) {
 			font-size: 1.6rem;
 		}
