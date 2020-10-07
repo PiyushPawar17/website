@@ -18,8 +18,13 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
 				name="og:description"
 				content="I code delightful User Experiences bringing ideas to life in the browser."
 			/>
+			<meta property="og:type" content="website" />
 			<meta property="og:url" content="https://piyushpawar.dev" />
 			<meta property="og:image" content="/img/avatar.png" />
+			<meta
+				name="description"
+				content="I code delightful User Experiences bringing ideas to life in the browser."
+			/>
 			<meta name="mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-capable" content="yes" />
 			<meta name="application-name" content="Piyush Pawar" />
