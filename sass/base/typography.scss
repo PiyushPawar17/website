@@ -1,77 +1,48 @@
-.heading {
-	&--primary {
-		display: inline-block;
-		position: relative;
-		font-size: 4rem;
-		font-weight: normal;
-		margin-bottom: 5rem;
+.type {
+	&__heading {
+		font-size: 2.4rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 5rem 0;
 
-		&::before {
-			content: '';
-			position: absolute;
-			width: 50%;
-			height: 2px;
-			top: 0;
-			left: 0;
+		@media screen and (max-width: 950px) {
+			font-size: 2.2rem;
 		}
 
-		&::after {
-			content: '';
-			position: absolute;
-			width: 50%;
-			height: 2px;
-			bottom: 0;
-			left: 50%;
-		}
-
-		@media screen and (max-width: 700px) {
-			font-size: 3.6rem;
-		}
-
-		@media screen and (max-width: 500px) {
-			font-size: 3.2rem;
+		@media screen and (max-width: 550px) {
+			font-size: 2rem;
 		}
 	}
 
-	&--blue::before,
-	&--blue::after {
-		background-color: $color-blue;
+	&__sub-heading {
+		font-size: 1.6rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 3rem;
 	}
 
-	&--yellow::before,
-	&--yellow::after {
-		background-color: $color-yellow;
+	&__title {
+		font-size: 1.8rem;
+		font-weight: 600;
+		margin-top: 2rem;
+
+		@media screen and (max-width: 550px) {
+			font-size: 1.6rem;
+		}
 	}
 
-	&--pink::before,
-	&--pink::after {
-		background-color: $color-primary;
-	}
-}
+	&__sub-title {
+		margin-top: 0.5rem;
 
-.title {
-	font-size: 5rem;
-	margin-bottom: 4.5rem;
-
-	@media screen and (max-width: 950px) {
-		font-size: 4.4rem;
+		@media screen and (max-width: 550px) {
+			font-size: 1.4rem;
+		}
 	}
 
-	@media screen and (max-width: 600px) {
-		font-size: 3.8rem;
-	}
-}
-
-.subtitle {
-	font-size: 3rem;
-	font-weight: normal;
-	margin-bottom: 8rem;
-
-	@media screen and (max-width: 950px) {
-		font-size: 2.6rem;
-	}
-
-	@media screen and (max-width: 600px) {
-		font-size: 2.2rem;
+	&__info {
+		display: block;
+		font-size: 1.2rem;
+		opacity: 0.6;
+		margin-top: 1.5rem;
 	}
 }

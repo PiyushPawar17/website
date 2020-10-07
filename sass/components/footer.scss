@@ -1,0 +1,41 @@
+.footer {
+	margin-top: auto;
+	padding: 4rem 0;
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media screen and (max-width: 650px) {
+			flex-direction: column;
+		}
+	}
+
+	&__copyright {
+		justify-self: self-start;
+
+		@media screen and (max-width: 650px) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__social-icons {
+		img {
+			width: 3rem;
+		}
+
+		a {
+			display: inline-block;
+			transition: all 0.2s ease-in-out;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+
+			&:not(:last-child) {
+				margin-right: 3rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+.intro {
+	&__header {
+		margin-bottom: 4rem;
+	}
+
+	&__greeting {
+		font-weight: normal;
+		opacity: 0.6;
+		text-transform: uppercase;
+
+		@media screen and (max-width: 550px) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__name {
+		font-size: 6.4rem;
+		font-weight: 600;
+		color: var(--color-blue);
+
+		@media screen and (max-width: 550px) {
+			font-size: 3.6rem;
+		}
+	}
+
+	&__job-title {
+		font-size: 2.4rem;
+		font-weight: 600;
+
+		@media screen and (max-width: 550px) {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__details {
+		font-size: 2rem;
+		line-height: 170%;
+		margin-bottom: 8rem;
+
+		@media screen and (max-width: 550px) {
+			font-size: 1.6rem;
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__button {
+		font-size: 1.8rem;
+		padding: 1.2rem 4.4rem;
+		background-color: var(--color-blue);
+		font-family: 'Poppins', sans-serif;
+		border-radius: 5px;
+		border: none;
+		color: var(--color-white);
+		cursor: pointer;
+		text-decoration: none;
+
+		@media screen and (max-width: 550px) {
+			font-size: 1.4rem;
+		}
+	}
+}

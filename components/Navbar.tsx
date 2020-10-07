@@ -1,77 +1,55 @@
-import { useState } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Link from 'next/link';
+import { SingletonRouter, withRouter } from 'next/router';
 
-const Navbar: React.FC = () => {
-	const [isChecked, setIsChecked] = useState(false);
+interface NavbarProps {
+	router: SingletonRouter;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ router: { pathname, asPath } }) => {
+	const isDevPath = pathname === '/development' || asPath === '/development';
+	const isDesignPath = pathname === '/design' || asPath === '/design';
+	const isAboutPath = pathname === '/about-me' || asPath === '/about-me';
 
 	return (
 		<nav className="navbar">
-			<AnchorLink href="#home" className="navbar__logo">
-				<img src="/static/img/avatar.svg" alt="Computer" /> Piyush Pawar
-			</AnchorLink>
-			<ul className="navbar__links">
-				<li className="navbar__link">
-					<a href="https://blog.piyushpawar.dev" target="_blank" rel="noopener noreferrer">
-						Blog
-					</a>
-				</li>
-				<li className="navbar__link">
-					<AnchorLink offset="70" href="#projects">
-						Projects
-					</AnchorLink>
-				</li>
-				<li className="navbar__link">
-					<AnchorLink offset="70" href="#about">
-						About Me
-					</AnchorLink>
-				</li>
-				<li className="navbar__link">
-					<AnchorLink offset="70" href="#contact">
-						Contact
-					</AnchorLink>
-				</li>
-			</ul>
-
-			<div className="mobile-nav">
-				<input
-					type="checkbox"
-					className="mobile-nav__checkbox"
-					id="mobile-nav"
-					checked={isChecked}
-					onChange={() => setIsChecked(!isChecked)}
-				/>
-				<label htmlFor="mobile-nav" className="mobile-nav__button">
-					<span className="mobile-nav__icon" />
-				</label>
-				<div className="mobile-nav__background" />
-
-				<nav className="mobile-nav__nav">
-					<ul className="mobile-nav__links">
-						<li className="mobile-nav__link">
-							<a href="https://blog.piyushpawar.dev" target="_blank" rel="noopener noreferrer">
-								Blog
-							</a>
-						</li>
-						<li className="mobile-nav__link" onClick={() => setIsChecked(false)}>
-							<AnchorLink offset="50" href="#projects">
-								Projects
-							</AnchorLink>
-						</li>
-						<li className="mobile-nav__link" onClick={() => setIsChecked(false)}>
-							<AnchorLink offset="50" href="#about">
-								About Me
-							</AnchorLink>
-						</li>
-						<li className="mobile-nav__link" onClick={() => setIsChecked(false)}>
-							<AnchorLink offset="50" href="#contact">
-								Contact
-							</AnchorLink>
-						</li>
-					</ul>
-				</nav>
+			<div className="container navbar__content">
+				<div className="navbar__logo">
+					<Link href="/">
+						<a>
+							<img src="/img/logo.svg" alt="Logo" />
+						</a>
+					</Link>
+				</div>
+				<ul className="navbar__links">
+					<li>
+						<a
+							href="https://blog.piyushpawar.dev"
+							target="_blank"
+							rel="noreferrer noopener"
+							className="link link--internal"
+						>
+							Blog
+						</a>
+					</li>
+					<li>
+						<Link href="/development">
+							<a className={`link link--internal ${isDevPath ? 'link--active' : ''}`}>Development</a>
+						</Link>
+					</li>
+					<li>
+						<Link href="/design">
+							<a className={`link link--internal ${isDesignPath ? 'link--active' : ''}`}>Design</a>
+						</Link>
+					</li>
+					<li>
+						<Link href="/about-me">
+							<a className={`link link--internal ${isAboutPath ? 'link--active' : ''}`}>About Me</a>
+						</Link>
+					</li>
+				</ul>
 			</div>
 		</nav>
 	);
 };
 
-export default Navbar;
+export default withRouter(Navbar);

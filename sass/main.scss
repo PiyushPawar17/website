@@ -1,18 +1,17 @@
 @import 'abstracts/variables';
-@import 'abstracts/mixins';
 
 @import 'base/base';
 @import 'base/typography';
-@import 'base/utilities';
 
-@import 'components/card';
-@import 'components/button';
-@import 'components/container';
+@import 'components/footer';
+@import 'components/hero';
+@import 'components/intro';
+@import 'components/link';
+@import 'components/navbar';
+@import 'components/project-card';
+@import 'components/projects';
 
-@import 'sections/home';
-@import 'sections/projects';
-@import 'sections/about';
-@import 'sections/contact';
+@import 'layout/container';
 
-@import 'layout/navbar';
-@import 'layout/footer';
+@import 'pages/about-me';
+@import 'pages/home';

@@ -1,0 +1,9 @@
+.home {
+	display: flex;
+	justify-content: space-between;
+	margin: 5rem auto;
+
+	@media screen and (max-width: 950px) {
+		flex-direction: column-reverse;
+	}
+}
