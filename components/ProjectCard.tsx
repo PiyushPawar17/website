@@ -11,10 +11,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, ext
 	const platform = externalURL.includes('github.com') ? 'GitHub' : 'Dribbble';
 	const projectPage = platform === 'GitHub' ? 'development' : 'design';
 
+	const imgWebp = `/img/projects/${fileName}.webp`;
+	const imgJpg = `/img/projects/${fileName}.jpg`;
+
 	return (
 		<div className="project-card">
 			<div className={`project-card__img-wrapper project-card__${projectPage}`}>
-				<img src={`/img/projects/${fileName}.webp`} alt={title} />
+				<picture>
+					<source type="image/webp" srcSet={imgWebp} />
+					<source type="image/jpeg" srcSet={imgJpg} />
+					<img src={imgJpg} alt={title} loading="lazy" />
+				</picture>
 			</div>
 			<h2 className="project-card__title type__title">
 				<a
