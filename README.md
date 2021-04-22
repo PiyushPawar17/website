@@ -20,8 +20,8 @@ This is the second iteration of my website with new design and blog included.
 -   Clone the repo
 
 ```sh
-git clone https://github.com/PiyushPawar17/developing-mind.git
-cd developing-mind
+git clone https://github.com/PiyushPawar17/website.git
+cd website
 ```
 
 -   Install dependencies
