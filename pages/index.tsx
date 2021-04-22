@@ -1,16 +1,16 @@
-import Layout from '../components/Layout';
-import Intro from '../components/Intro';
-import Hero from '../components/Hero';
+import Container from '@layouts/Container';
+import Hero from '@components/Hero';
+import Development from '@components/Development';
+import Design from '@components/Design';
 
-const Index: React.FC = () => {
+const IndexPage = () => {
 	return (
-		<Layout title="Piyush Pawar | Front-end Developer">
-			<main className="container home">
-				<Intro />
-				<Hero />
-			</main>
-		</Layout>
+		<Container>
+			<Hero />
+			<Development />
+			<Design />
+		</Container>
 	);
 };
 
-export default Index;
+export default IndexPage;

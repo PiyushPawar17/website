@@ -1,49 +1,49 @@
 import Link from 'next/link';
-import { SingletonRouter, withRouter } from 'next/router';
+import { useRouter } from 'next/router';
+import clsx from 'clsx';
 
-interface NavbarProps {
-	router: SingletonRouter;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ router: { pathname, asPath } }) => {
-	const isDevPath = pathname === '/development' || asPath === '/development';
-	const isDesignPath = pathname === '/design' || asPath === '/design';
-	const isAboutPath = pathname === '/about-me' || asPath === '/about-me';
+const Navbar = () => {
+	const router = useRouter();
+	const isAboutPath = router.pathname === '/about-me' || router.asPath === '/about-me';
+	const isBlogPath = router.pathname === '/blog' || router.asPath === '/blog';
 
 	return (
-		<nav className="navbar">
-			<div className="container navbar__content">
-				<div className="navbar__logo">
+		<nav className="py-10">
+			<div className="flex items-center">
+				<div>
 					<Link href="/">
-						<a>
-							<img src="/img/logo.svg" alt="Logo" />
+						<a className="outline-none focus:ring focus:ring-primary focus:ring-offset-1 focus:ring-offset-body inline-block">
+							<img src="/static/logo.svg" alt="Logo" />
 						</a>
 					</Link>
 				</div>
-				<ul className="navbar__links">
+				<ul className="flex ml-auto space-x-10">
 					<li>
-						<a
-							href="https://blog.piyushpawar.dev"
-							target="_blank"
-							rel="noreferrer noopener"
-							className="link link--internal"
-						>
-							Blog
-						</a>
-					</li>
-					<li>
-						<Link href="/development">
-							<a className={`link link--internal ${isDevPath ? 'link--active' : ''}`}>Development</a>
+						<Link href="/blog">
+							<a
+								className={clsx(
+									'inline-block text-base text-gray-100 outline-none rounded-sm focus:ring focus:ring-primary focus:ring-offset-2 focus:ring-offset-body link link--internal',
+									{
+										'link--active': isBlogPath
+									}
+								)}
+							>
+								Blog
+							</a>
 						</Link>
 					</li>
 					<li>
-						<Link href="/design">
-							<a className={`link link--internal ${isDesignPath ? 'link--active' : ''}`}>Design</a>
-						</Link>
-					</li>
-					<li>
-						<Link href="/about-me">
-							<a className={`link link--internal ${isAboutPath ? 'link--active' : ''}`}>About Me</a>
+						<Link href="/about">
+							<a
+								className={clsx(
+									'inline-block text-base text-gray-100 outline-none rounded-sm focus:ring focus:ring-primary focus:ring-offset-2 focus:ring-offset-body link link--internal',
+									{
+										'link--active': isAboutPath
+									}
+								)}
+							>
+								About Me
+							</a>
 						</Link>
 					</li>
 				</ul>
@@ -52,4 +52,4 @@ const Navbar: React.FC<NavbarProps> = ({ router: { pathname, asPath } }) => {
 	);
 };
 
-export default withRouter(Navbar);
+export default Navbar;

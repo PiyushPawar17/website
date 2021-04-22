@@ -1,0 +1,55 @@
+<svg width="198" height="210" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<mask id="a" maskUnits="userSpaceOnUse" x="9" y="30" width="180" height="180">
+		<path d="M99 210a90 90 0 100-180 90 90 0 000 180z" fill="#fff" />
+	</mask>
+	<g mask="url(#a)">
+		<path d="M99 210a90 90 0 100-180 90 90 0 000 180z" fill="#E6E6E6" />
+		<path d="M189 30H9v180h180V30z" fill="#0BA5F8" />
+	</g>
+	<mask id="b" maskUnits="userSpaceOnUse" x="0" y="0" width="198" height="210">
+		<path d="M9 120a90 90 0 10180 0h9V0H0v120h9z" fill="#fff" />
+	</mask>
+	<g mask="url(#b)">
+		<mask id="c" maskUnits="userSpaceOnUse" x="24" y="27" width="150" height="183">
+			<path d="M117 135v14h3c30 0 54 24 54 54v7H24v-7c0-30 24-54 54-54h3v-14c-13-6-22-18-24-33-4-1-7-4-7-9V83c0-5 3-9 7-9v-5a42 42 0 1184 0v5c4 0 8 4 8 9v10c0 5-4 8-8 9-2 15-11 27-24 33z" fill="#fff" />
+		</mask>
+		<g mask="url(#c)">
+			<path d="M117 135v14h3c30 0 54 24 54 54v7H24v-7c0-30 24-54 54-54h3v-14c-13-6-22-18-24-33-4-1-7-4-7-9V83c0-5 3-9 7-9v-5a42 42 0 1184 0v5c4 0 8 4 8 9v10c0 5-4 8-8 9-2 15-11 27-24 33z" fill="#D0C6AC" />
+			<path d="M198 27H0v183h198V27z" fill="#EDB98A" />
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M141 86v18a42 42 0 11-84 0V86v12a42 42 0 1084 0V86z" fill="#000" fill-opacity=".1" />
+		</g>
+		<mask id="d" maskUnits="userSpaceOnUse" x="24" y="137" width="150" height="73">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M81 137c-13 2-24 6-24 16-19 9-33 28-33 50v7h150v-7c0-22-14-41-33-50 0-10-11-14-24-16v15a18 18 0 01-36 0v-15z" fill="#fff" />
+		</mask>
+		<g mask="url(#d)">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M81 137c-13 2-24 6-24 16-19 9-33 28-33 50v7h150v-7c0-22-14-41-33-50 0-10-11-14-24-16v15a18 18 0 01-36 0v-15z" fill="#B7C1DB" />
+			<path d="M198 128H0v82h198v-82z" fill="#3C4F5C" />
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M77 174v36h-6v-39l6 3zm50-3v30a3 3 0 11-5 0v-27l5-3z" fill="#F4F4F4" />
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M68 137c-11 2-19 6-19 15 0 15 25 27 50 27s50-12 50-27c0-9-8-13-19-15 7 3 11 7 11 14 0 15-21 28-42 28s-42-13-42-28c0-7 4-11 11-14z" fill="#000" fill-opacity=".2" />
+		</g>
+		<mask id="e" maskUnits="userSpaceOnUse" x="84" y="110" width="30" height="15">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M85 112a14 14 0 0028 0l-1-2H86l-1 2z" fill="#fff" />
+		</mask>
+		<g mask="url(#e)">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M85 112a14 14 0 0028 0l-1-2H86l-1 2z" fill="#000" fill-opacity=".7" />
+			<path d="M107 102H92c-3 0-4 2-4 4v4c0 2 1 4 4 4h15c2 0 4-2 4-4v-4c0-2-2-4-4-4z" fill="#fff" />
+			<path d="M95 135a8 8 0 100-17 8 8 0 000 17z" fill="#FF4F6D" />
+			<path d="M103 135a8 8 0 100-17 8 8 0 000 17z" fill="#FF4F6D" />
+		</g>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M90 98c0 3 4 6 9 6s9-3 9-6" fill="#000" fill-opacity=".2" />
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M69 84c2-3 5-4 8-4 4 0 7 1 8 4v1l-8-2-7 2c-1 1-1 0-1-1zM113 84c1-3 4-4 8-4 3 0 6 1 8 4 0 1 0 2-1 1l-7-2-7 2c-1 1-2 0-1-1z" fill="#000" fill-opacity=".6" />
+		<path d="M69 74c3-4 11-6 18-4a1 1 0 000-3c-8-2-17 0-21 6a1 1 0 103 1zM129 74c-3-4-11-6-18-4a1 1 0 110-3c8-2 17 0 21 6a2 2 0 01-3 1z" fill="#000" fill-opacity=".6" />
+		<mask id="f" maskUnits="userSpaceOnUse" x="0" y="0" width="198" height="210">
+			<path d="M198 0H0v210h198V0z" fill="#fff" />
+		</mask>
+		<g mask="url(#f)">
+			<mask id="g" maskUnits="userSpaceOnUse" x="54" y="12" width="89" height="63">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M134 30l-6-6-2-1-1-1-1-1c1-1 3-5 1-5-1-1-2 0-3 1l-4 1c1-1 2-4 0-3l-6 2c0-1 3-4 1-4l-4 1-7 2c-9 2-18 1-26 5-6 3-12 8-16 13-3 6-4 12-5 19v14c0 2 0 9 2 7s2-6 2-7l2-9c1-5 3-10 8-14l7-7 2-1h29l8-1h5l3 4 6 5c4 3 7 8 8 13l3 16c0 1 1 2 2 1v-3l1-9c-1-11-1-24-9-32z" fill="#fff" />
+			</mask>
+			<g mask="url(#g)">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M134 30l-6-6-2-1-1-1-1-1c1-1 3-5 1-5-1-1-2 0-3 1l-4 1c1-1 2-4 0-3l-6 2c0-1 3-4 1-4l-4 1-7 2c-9 2-18 1-26 5-6 3-12 8-16 13-3 6-4 12-5 19v14c0 2 0 9 2 7s2-6 2-7l2-9c1-5 3-10 8-14l7-7 2-1h29l8-1h5l3 4 6 5c4 3 7 8 8 13l3 16c0 1 1 2 2 1v-3l1-9c-1-11-1-24-9-32z" fill="#1F3140" />
+				<path d="M197 0H-1v210h198V0z" fill="#2C1B18" />
+			</g>
+		</g>
+	</g>
+</svg>

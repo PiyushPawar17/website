@@ -1,44 +1,49 @@
+import Image from 'next/image';
+import clsx from 'clsx';
+
 interface ProjectCardProps {
 	title: string;
 	externalURL: string;
 	description?: string;
 	tech?: string[];
-	demoURL?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, externalURL, demoURL }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, externalURL }) => {
 	const fileName = title.replace(/ /g, '-').toLowerCase();
 	const platform = externalURL.includes('github.com') ? 'GitHub' : 'Dribbble';
-	const projectPage = platform === 'GitHub' ? 'development' : 'design';
-
-	const imgWebp = `/img/projects/${fileName}.webp`;
-	const imgJpg = `/img/projects/${fileName}.jpg`;
 
 	return (
-		<div className="project-card">
-			<div className={`project-card__img-wrapper project-card__${projectPage}`}>
-				<picture>
-					<source type="image/webp" srcSet={imgWebp} />
-					<source type="image/jpeg" srcSet={imgJpg} />
-					<img src={imgJpg} alt={title} loading="lazy" />
-				</picture>
+		<a
+			href={externalURL}
+			target="_blank"
+			rel="noreferrer noopener"
+			className="inline-block w-full p-3 sm:p-4 bg-code rounded outline-none transform transition duration-200 hover:scale-102 focus:scale-102 focus:ring-2 ring-primary ring-offset-4 focus:ring-offset-body"
+		>
+			<div className="overflow-hidden grid place-items-center">
+				<Image
+					src={`/static/projects/${fileName}.jpg`}
+					alt={title}
+					width={640}
+					height={360}
+					layout="intrinsic"
+					quality={100}
+					className="object-cover"
+					priority
+				/>
 			</div>
-			<h2 className="project-card__title type__title">
-				<a
-					href={demoURL || externalURL}
-					target="_blank"
-					rel="noreferrer noopener"
-					className={demoURL && 'link link--external'}
-				>
-					{title}
-				</a>
-				<a href={externalURL} target="_blank" rel="noreferrer noopener">
-					<img src={`/img/logos/${platform.toLowerCase()}-minimal.svg`} alt={platform} />
-				</a>
+			<h2
+				className={clsx('flex justify-between items-center text-base sm:text-lg font-bold mt-5', {
+					'mb-4': platform === 'GitHub'
+				})}
+			>
+				<p className="link link--external">{title}</p>
+				<div>
+					<img src={`/static/logos/${platform.toLowerCase()}.svg`} width="20" alt={`${platform} Logo`} />
+				</div>
 			</h2>
-			{description && <p className="type__sub-title">{description}</p>}
+			{description && <p className="text-sm sm:text-base mt-1 text-gray-100">{description}</p>}
 			{tech && (
-				<small className="type__info">
+				<small className="block text-xs opacity-70 mt-4">
 					{tech.map(t => (
 						<span key={t} className="project-card__tech">
 							{t}
@@ -46,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, ext
 					))}
 				</small>
 			)}
-		</div>
+		</a>
 	);
 };
 
