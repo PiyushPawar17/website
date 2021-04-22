@@ -1,6 +1,6 @@
-# Developing Mind
+# Website
 
-This is the second iteration of my blog with new design.
+This is the second iteration of my website with new design and blog included.
 
 ### Tech Stack
 
