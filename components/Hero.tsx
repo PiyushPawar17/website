@@ -16,7 +16,7 @@ const Hero = () => {
 					I code &#40;and occasionally design&#41; delightful User Interfaces bringing ideas to life in the
 					browser
 				</p>
-				<Link href="/about-me#contact">
+				<Link href="/about#contact">
 					<a className="inline-block text-sm sm:text-lg px-11 py-3 bg-primary font-sans rounded text-gray-100 cursor-pointer outline-none transform transition duration-200 hover:scale-105 focus:scale-105 focus:ring focus:ring-primary focus:ring-offset-2 focus:ring-offset-body">
 						Get In Touch
 					</a>
