@@ -1,0 +1,22 @@
+{
+	"cleanUrls": true,
+	"trailingSlash": false,
+	"redirects": [
+		{
+			"source": "/github",
+			"destination": "https://github.com/PiyushPawar17"
+		},
+		{
+			"source": "/dribbble",
+			"destination": "https://github.com/PiyushPawar17"
+		},
+		{
+			"source": "/twitter",
+			"destination": "https://twitter.com/PiyushPawar_17"
+		},
+		{
+			"source": "/linkedin",
+			"destination": "https://www.linkedin.com/in/piyush-pawar"
+		}
+	]
+}
