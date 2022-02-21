@@ -2,8 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import clsx from 'clsx';
 
-import ViewCounter from '@components/ViewCounter';
-
 import { FrontMatterWithSlug } from '@typings/types';
 
 interface BlogCardProps extends FrontMatterWithSlug {
@@ -41,7 +39,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ slug, title, subtitle, readingTime,
 							'text-sm sm:text-xs mb-2': !isFeatured
 						})}
 					>
-						{readingTime.text} <ViewCounter slug={slug} />
+						{readingTime.text}
 					</small>
 					<h3
 						className={clsx('font-bold overflow-hidden overflow-ellipsis whitespace-nowrap', {

@@ -1,8 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import { QueryClient, QueryClientProvider } from 'react-query';
 
 import * as gtag from '@lib/gtag';
 
@@ -11,7 +10,6 @@ import 'tippy.js/animations/shift-toward-subtle.css';
 import '../styles/globals.css';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-	const queryClientRef = useRef<typeof QueryClient.prototype | null>(null);
 	const router = useRouter();
 
 	useEffect(() => {
@@ -25,10 +23,6 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
 			router.events.off('routeChangeComplete', handleRouteChange);
 		};
 	}, [router.events]);
-
-	if (!queryClientRef.current) {
-		queryClientRef.current = new QueryClient();
-	}
 
 	const meta = {
 		title: 'Piyush Pawar | Front-end Developer',
@@ -68,17 +62,8 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
 				<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/logo192.png" />
 				<link rel="icon" type="image/png" sizes="512x512" href="/logo512" />
 				<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="/logo512" />
-
-				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-					rel="stylesheet"
-				/>
-				<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
 			</Head>
-			<QueryClientProvider client={queryClientRef.current}>
-				<Component {...pageProps} />
-			</QueryClientProvider>
+			<Component {...pageProps} />
 		</>
 	);
 };

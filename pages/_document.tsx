@@ -8,6 +8,13 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
+					<link rel="preconnect" href="https://fonts.gstatic.com" />
+					<link
+						href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+						rel="stylesheet"
+					/>
+					<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+
 					<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
 					<script
 						dangerouslySetInnerHTML={{

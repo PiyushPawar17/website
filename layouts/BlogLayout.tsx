@@ -1,12 +1,7 @@
-import { useEffect } from 'react';
 import Image from 'next/image';
-import { useMutation } from 'react-query';
 import { parseISO, format } from 'date-fns';
 
 import Container from '@layouts/Container';
-import ViewCounter from '@components/ViewCounter';
-
-import { addViewsToBlog } from '@lib/queryHelpers';
 
 import { FrontMatter } from '@typings/types';
 
@@ -17,11 +12,6 @@ interface BlogLayoutProps {
 const BlogLayout: React.FC<BlogLayoutProps> = ({ children, frontMatter }) => {
 	const publishedAt = new Date(frontMatter.publishedAt).toISOString();
 	const bannerImagePath = `/static/blog-images/${frontMatter.slug}/banner.png`;
-
-	const { mutate } = useMutation(addViewsToBlog);
-	useEffect(() => {
-		mutate({ slug: frontMatter.slug });
-	}, []);
 
 	return (
 		<Container
@@ -42,9 +32,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, frontMatter }) => {
 					<h1 className="font-bold text-gray-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mt-4 lg:mt-6 mb-4">
 						{frontMatter.title}
 					</h1>
-					<p className="text-center text-gray-100 text-sm opacity-70">
-						{frontMatter.readingTime.text} <ViewCounter slug={frontMatter.slug} />
-					</p>
+					<p className="text-center text-gray-100 text-sm opacity-70">{frontMatter.readingTime.text}</p>
 				</header>
 				<div className="mb-10">
 					<Image
