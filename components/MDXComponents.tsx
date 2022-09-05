@@ -18,9 +18,14 @@ const CustomLink: React.FC<
 	return <a target="_blank" rel="noopener noreferrer" {...props} />;
 };
 
+const ListItem: React.FC<React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>> = props => {
+	return <li className="leading-5 last:mb-8" {...props} />;
+};
+
 const MDXCompnents = {
 	Image,
-	a: CustomLink
+	a: CustomLink,
+	li: ListItem
 };
 
 export default MDXCompnents;
